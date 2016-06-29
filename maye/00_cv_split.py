@@ -7,7 +7,6 @@ a_map = {}
 v_map = {}
 
 with open('ACCEDEranking.txt', 'r') as fin:
-
     for line in fin:
         l = line.strip().split('\t')
         if l[0] == 'id':

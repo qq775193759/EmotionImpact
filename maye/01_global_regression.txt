@@ -1,0 +1,36 @@
+# Arousal
+## SVR
+scale
+c=1,    epsilon=0.1 MSE=0.926 r=0.261;  
+c=2,    epsilon=0.1 MSE=0.945 r=0.253;  
+c=5,    epsilon=0.1 MSE=0.988 r=0.238;  
+c=10,   epsilon=0.1 MSE=1.043 r=0.221;  
+c=0.5,  epsilon=0.1 MSE=0.913 r=0.270;  
+c=0.2,  epsilon=0.1 MSE=0.901 r=0.277; 
+c=0.1,  epsilon=0.1 MSE=0.897 r=0.277;  epsilon=0.2 MSE=0.889 r=0.276;  epsilon=0.05 MSE=0.898 r=0.278
+c=0.05, epsilon=0.1 MSE=0.895 r=0.276;  epsilon=0.2 MSE=0.887 r=0.276;  epsilon=0.05 MSE=0.896 r=0.277
+c=0.02, epsilon=0.1 MSE=0.897 r=0.271;
+
+## AdaBoost
+no scale n=150 lr=0.1
+MSE = 0.8688
+r = 0.267
+
+
+# Valence
+## SVR
+scale
+c=1,    epsilon=0.1 MSE=0.402 r=0.206;  
+c=2,    epsilon=0.1 MSE=0.413 r=0.187;  
+c=5,    epsilon=0.1 MSE=0.434 r=0.164;  
+c=0.5,  epsilon=0.1 MSE=0.395 r=0.220;  
+c=0.2,  epsilon=0.1 MSE=0.390 r=0.237; 
+c=0.1,  epsilon=0.1 MSE=0.388 r=0.244;  epsilon=0.2 MSE=0.379 r=0.246;  epsilon=0.5 MSE=0.364 r=0.237 
+c=0.05, epsilon=0.1 MSE=0.389 r=0.247;  epsilon=0.2 MSE=0.378 r=0.251;  epsilon=0.5 MSE=0.364 r=0.244
+c=0.02, epsilon=0.1 MSE=0.390 r=0.249;  epsilon=0.2 MSE=0.380 r=0.251;  epsilon=0.5 MSE=0.366 r=0.247
+c=0.01, epsilon=0.1 MSE=0.394 r=0.246;
+
+## AdaBoost
+no scale n=150 lr=0.1
+MSE = 0.3720
+r = 0.235
