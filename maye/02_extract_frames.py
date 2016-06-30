@@ -14,5 +14,8 @@ for i in range(N_MOVIES):
     success = True
     while success:
         success, image = video.read()
+        if not success:
+            print(str(i) + "Done!")
+            break
         cv2.imwrite(out + "frame" + str(count) + ".png", image)
         count += 1
