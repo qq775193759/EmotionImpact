@@ -27,9 +27,9 @@ def process(i):
         count += 1
 
 if __name__ == "__main__":
-    # pool = multiprocessing.Pool(processes=10)
+    pool = multiprocessing.Pool(processes=20)
     for i in range(N_MOVIES):
-        # pool.apply_async(process, (i, ))
-        process(i)
-    # pool.close()
-    # pool.join()
+        pool.apply_async(process, (i, ))
+        # process(i)
+    pool.close()
+    pool.join()
