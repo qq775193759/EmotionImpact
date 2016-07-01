@@ -19,7 +19,7 @@ def process(i):
     while True:
         out_name = out + "frame" + str(count) + ".png"
         subprocess.call('ffmpeg -i ' + filename + ' -ss ' + str(time) + ' -vcodec png -vframes 1 -an -f rawvideo ' + out_name,
-                        shell=True, stdout=FNULL, stderr=subprocess.STDOUT)
+                        shell=True)
         if os.stat(out_name).st_size == 0:
             os.remove(out_name)
             break
