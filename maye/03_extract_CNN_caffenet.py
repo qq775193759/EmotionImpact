@@ -49,8 +49,10 @@ net.blobs['data'].reshape(1,        # batch size
 
 d = '/media/hcsi3/EmotionImpact/2016data/frames/'
 NN = 9800
-all_out = []
+f = open('caffeNet_4096_avg.txt', 'w')
 for i in range(NN):
+	if i % 10 == 0:
+		print('Calculating ' + str(i) + '...')
 	dd = d + str(i) + '/'
 	g = glob.glob(dd + '*.png')
 	data = []
@@ -72,11 +74,7 @@ for i in range(NN):
 	output = net.blobs['fc7'].data
 	# Do average for simplicity
 	out = np.mean(output, axis=0)
-	all_out.append(out)
-
-with open('caffeNet_4096_avg.txt', 'w') as f:
-	for i in range(NN):
-		f.write(str(i))
-		for j in all_out[i]:
-			f.write('\t' + str(j))
-		f.write('\n')
+	f.write(str(i))
+	for j in out:
+		f.write('\t' + str(j))
+	f.write('\n')
